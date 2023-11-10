@@ -18,7 +18,7 @@ class Controller
         exit($this->view->render($page, $data));
     }
 
-    // Lưu các giá trị của form được cho trong $data vào $_SESSION 
+    // Lưu các giá trị của form được cho trong $data vào $_SESSION
     protected function saveFormValues(array $data, array $except = [])
     {
         $form = [];
@@ -33,5 +33,11 @@ class Controller
     protected function getSavedFormValues()
     {
         return session_get_once('form', []);
+    }
+
+    public function sendNotFound()
+    {
+        http_response_code(404);
+        exit($this->view->render('errors/404'));
     }
 }

@@ -8,6 +8,10 @@ class User extends Model
 {
     protected $table = 'users';
     protected $fillable = ['name', 'email', 'password'];
+    public function contacts()
+    {
+        return $this->hasMany(Contact::class);
+    }
 
     public static function validate(array $data)
     {
@@ -27,4 +31,5 @@ class User extends Model
 
         return $errors;
     }
+
 }

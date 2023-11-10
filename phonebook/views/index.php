@@ -1,6 +1,6 @@
-<?php $this->layout("layouts/default", ["title" => APPNAME]) ?>
+<?php $this->layout("layouts/default", ["title" => APPNAME])?>
 
-<?php $this->start("page") ?>
+<?php $this->start("page")?>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -8,4 +8,4 @@
         </div>
     </div>
 </div>
-<?php $this->stop() ?>
+<?php $this->stop()?>

@@ -23,4 +23,13 @@ $router->post('/login', '\App\Controllers\Auth\LoginController@store');
 $router->get('/', '\App\Controllers\HomeController@index');
 $router->get('/home', '\App\Controllers\HomeController@index');
 
-$router->run();
+$router->set404('\App\Controllers\Controller@sendNotFound');
+
+//2
+$router->get('/', '\App\Controllers\ContactsController@index');
+$router->get('/home', '\App\Controllers\ContactsController@index');
+
+$router->get('/contacts/create', '\App\Controllers\ContactsController@create');
+$router->post('/contacts', '\App\Controllers\ContactsController@store');
+
+//3
